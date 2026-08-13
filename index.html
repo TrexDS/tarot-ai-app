@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日塔罗 · 今日占卜</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrap" style="position:relative;">
+  <button class="lang-toggle" id="langToggle" type="button">EN</button>
+  <div class="eyebrow" id="eyebrowText">今日占卜</div>
+  <div class="date-line" id="dateLine">—</div>
+
+  <div class="stage">
+    <div class="card-slot">
+      <div class="card" id="cardEl">
+        <div class="face card-back">
+          <div class="back-glyph">☾</div>
+        </div>
+        <div class="face card-front">
+          <img id="cardImg" alt="">
+          <div class="fallback" id="cardFallback" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hint" id="hintText">轻触卡牌，抽出今日的一张</div>
+
+  <div class="reveal" id="revealPanel">
+    <div class="name-row">
+      <div class="seal" id="sealEl">正</div>
+    </div>
+    <div class="card-name"><span class="cn" id="nameCn">—</span></div>
+    <div class="card-name-en" id="nameEn">—</div>
+    <div class="meaning">
+      <span class="label" id="orientLabel">正位 · 今日提示</span>
+      <p class="txt" id="meaningText">—</p>
+    </div>
+    <div class="meaning detail-box">
+      <span class="label" id="detailLabel">详细解读</span>
+      <p class="txt" id="detailText">—</p>
+    </div>
+  </div>
+
+  <div class="divider"><span id="journalLabel">抽签簿</span></div>
+  <div class="journal" id="journalList">
+    <div class="empty-journal" id="emptyJournalText">还没有记录，抽过的牌会留在这里</div>
+  </div>
+
+  <div class="footer-note" id="footerNote">每天的第一次抽牌会被记住 · <button id="resetBtn">重新抽取（测试用）</button></div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
